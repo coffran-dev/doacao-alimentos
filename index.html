@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celeiro — Gestão da Ação Social</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="mobile-topbar">
+  <button id="menuToggle" aria-label="Abrir menu">☰</button>
+  <strong id="mobileTitle">Celeiro</strong>
+</div>
+
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" stroke="#C98D2E" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
+        <path d="M8 17 H32" stroke="#C98D2E" stroke-width="2.4"/>
+        <path d="M13 17 L14 33 M20 17 L20 33 M27 17 L26 33" stroke="#F3ECDA" stroke-width="1.4" opacity=".6"/>
+      </svg>
+      <div class="brand-text">Celeiro<small>Ação Social</small></div>
+    </div>
+
+    <ul class="nav-list" id="navList">
+      <li><button class="nav-item" data-view="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="12" width="8" height="9" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/></svg>
+        Dashboard
+      </button></li>
+      <li><button class="nav-item" data-view="doadores">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3.6 2.9-6 5.5-6s5.5 2.4 5.5 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 20c.2-2.6 1.9-4.6 4-4.6"/></svg>
+        Doadores
+      </button></li>
+      <li><button class="nav-item" data-view="compromissos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="4.5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v3M16 3v3"/><path d="M7.5 13.5h3M7.5 17h6"/></svg>
+        Compromissos
+      </button></li>
+      <li><button class="nav-item" data-view="estoque">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+        Estoque
+      </button></li>
+      <li><button class="nav-item" data-view="cestas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10l7-5.5L19 10"/><path d="M5 10l1.8 10h10.4L19 10"/><path d="M5 10h14"/></svg>
+        Modelos de Cesta
+      </button></li>
+      <li><button class="nav-item" data-view="familias">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="7" r="2.6"/><circle cx="16.2" cy="7.6" r="2"/><path d="M3 20c0-3.3 2.4-5.7 5-5.7s5 2.4 5 5.7"/><path d="M13.5 20c.2-2.6 1.8-4.6 3.8-4.6 1.7 0 3.2 1.4 3.5 3.4"/></svg>
+        Famílias
+      </button></li>
+      <li><button class="nav-item" data-view="entregas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+        Entregas
+      </button></li>
+    </ul>
+
+    <div class="sidebar-footer">Sistema de arrecadação de alimentos · dados vivem na sua Planilha Google</div>
+  </aside>
+
+  <main class="main" id="main">
+    <div id="viewRoot" class="loading">Carregando…</div>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/doadores.js"></script>
+<script src="js/compromissos.js"></script>
+<script src="js/estoque.js"></script>
+<script src="js/cestas.js"></script>
+<script src="js/familias.js"></script>
+<script src="js/entregas.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
