@@ -136,6 +136,8 @@ button { font-family: var(--font-body); cursor: pointer; }
   margin-bottom: 22px; 
   flex-wrap: wrap; 
   width: 100%;
+  flex-direction: column;
+  text-align: center;
 }
 .page-header h1 { 
   font-size: 1.7rem; 
@@ -143,7 +145,8 @@ button { font-family: var(--font-body); cursor: pointer; }
 }
 .page-header p { 
   margin: 4px 0 0; 
-  color: var(--ink-soft); 
+  color: var(--ink-soft);
+  text-align: center;
 }
 .eyebrow { 
   font-family: var(--font-mono); 
@@ -443,6 +446,9 @@ tbody tr:hover { background: var(--paper-dim); }
   justify-content: space-between; 
   margin-bottom: 12px; 
   width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
 }
 .section-title h3 { 
   font-size: 1.05rem; 
