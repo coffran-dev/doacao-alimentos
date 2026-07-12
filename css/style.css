@@ -1,32 +1,39 @@
 /* ==========================================================================
-   Design tokens — inspirado em despensa/celeiro: papel-trigo, tinta oliva,
-   dourado-trigo e verde-folha. Serifado "Fraunces" para personalidade,
-   "Work Sans" para dados/UI, "IBM Plex Mono" para números.
+   Design tokens — Tema verde, preto e branco
+   Mantendo todas as classes e estrutura original
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
 :root {
- /* Cores */
-  --paper: #F5F7F6;
+  /* Cores - Tema Verde, Preto e Branco */
+  --paper: #F8FAF9;
   --paper-dim: #E8ECEA;
 
   --ink: #111827;
   --ink-soft: #4B5563;
 
-  --green: #2E7D32;
-  --green-dark: #1B5E20;
-  --green-light: #E8F5E9;
+  --green: #059669;
+  --green-dark: #065F46;
+  --green-light: #D1FAE5;
 
-  --accent: #43A047;
+  --accent: #10B981;
 
-  --danger: #C62828;
-  --danger-light: #FDECEC;
+  --danger: #DC2626;
+  --danger-light: #FEE2E2;
 
   --card: #FFFFFF;
-  --border: #D1D5DB;
+  --border: #E5E7EB;
 
   --shadow: 0 2px 8px rgba(0,0,0,.06),
             0 10px 30px rgba(0,0,0,.08);
+
+  /* Mantendo nomes originais para compatibilidade */
+  --wheat: #059669;
+  --wheat-dark: #065F46;
+  --leaf: #059669;
+  --leaf-light: #D1FAE5;
+  --brick: #DC2626;
+  --brick-light: #FEE2E2;
 
   /* Tipografia */
   --font-display: 'Fraunces', Georgia, serif;
@@ -37,6 +44,7 @@
   --radius: 14px;
   --radius-sm: 8px;
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -107,7 +115,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 .nav-item.active { background: var(--wheat); color: var(--ink); font-weight: 600; }
 .nav-item.active svg { opacity: 1; }
 
-.sidebar-footer { margin-top: auto; font-size: .72rem; color: rgba(243,236,218,.5); padding: 0 8px; }
+.sidebar-footer { margin-top: auto; font-size: .72rem; color: rgba(255,255,255,.4); padding: 0 8px; }
 
 .main {
   padding: 28px 36px 60px;
@@ -126,7 +134,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: .88rem; font-weight: 600; transition: transform .1s ease, filter .15s ease;
 }
 .btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--wheat); color: var(--ink); }
+.btn-primary { background: var(--wheat); color: white; }
 .btn-primary:hover { filter: brightness(1.06); }
 .btn-secondary { background: var(--card); color: var(--ink); border-color: var(--border); }
 .btn-secondary:hover { background: var(--paper-dim); }
@@ -189,8 +197,8 @@ tbody tr:hover { background: var(--paper-dim); }
 
 .badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: .72rem; font-weight: 600; }
 .badge-ativo { background: var(--leaf-light); color: var(--leaf); }
-.badge-pausado { background: #FBEFDA; color: var(--wheat-dark); }
-.badge-encerrado, .badge-inativa { background: #EFE9DA; color: var(--ink-soft); }
+.badge-pausado { background: #FEF3C7; color: var(--warning); }
+.badge-encerrado, .badge-inativa { background: #F3F4F6; color: var(--ink-soft); }
 .badge-low { background: var(--brick-light); color: var(--brick); }
 
 .list-empty { padding: 30px 10px; text-align: center; color: var(--ink-soft); font-size: .88rem; }
@@ -207,7 +215,7 @@ tbody tr:hover { background: var(--paper-dim); }
 @media (max-width: 640px) { .field-row { grid-template-columns: 1fr; } }
 
 .modal-backdrop {
-  position: fixed; inset: 0; background: rgba(38,48,31,.45); backdrop-filter: blur(2px);
+  position: fixed; inset: 0; background: rgba(0,0,0,.45); backdrop-filter: blur(2px);
   display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; z-index: 50;
   overflow-y: auto;
 }
