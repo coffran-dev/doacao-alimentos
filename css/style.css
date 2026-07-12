@@ -6,28 +6,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
 :root {
-  --paper: #F3ECDA;
-  --paper-dim: #EAE1CA;
-  --ink: #26301F;
-  --ink-soft: #4B5540;
-  --wheat: #C98D2E;
-  --wheat-dark: #A8721F;
-  --leaf: #4C6B3E;
-  --leaf-light: #E4ECDD;
-  --brick: #A8452F;
-  --brick-light: #F5DED8;
-  --card: #FFFDF6;
-  --border: #DCD0AE;
-  --shadow: 0 2px 0 rgba(38, 48, 31, 0.06), 0 8px 24px rgba(38, 48, 31, 0.06);
+ /* Cores */
+  --paper: #F5F7F6;
+  --paper-dim: #E8ECEA;
 
+  --ink: #111827;
+  --ink-soft: #4B5563;
+
+  --green: #2E7D32;
+  --green-dark: #1B5E20;
+  --green-light: #E8F5E9;
+
+  --accent: #43A047;
+
+  --danger: #C62828;
+  --danger-light: #FDECEC;
+
+  --card: #FFFFFF;
+  --border: #D1D5DB;
+
+  --shadow: 0 2px 8px rgba(0,0,0,.06),
+            0 10px 30px rgba(0,0,0,.08);
+
+  /* Tipografia */
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Work Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
+  /* Bordas */
   --radius: 14px;
   --radius-sm: 8px;
 }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
