@@ -26,6 +26,7 @@
     const root = document.getElementById('viewRoot');
     UI.loading(root);
     document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebarOverlay').classList.remove('open');
     try {
       await VIEWS[viewName].render(root);
     } catch (err) {
@@ -42,6 +43,12 @@
 
   document.getElementById('menuToggle').addEventListener('click', () => {
     document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('open');
+  });
+
+  document.getElementById('sidebarOverlay').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebarOverlay').classList.remove('open');
   });
 
   window.addEventListener('hashchange', () => navigate(window.location.hash.slice(1)));

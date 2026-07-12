@@ -76,13 +76,13 @@ const UI = (function () {
             <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" />
           </clipPath>
         </defs>
-        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" fill="#EAE1CA" stroke="#DCD0AE" stroke-width="1"/>
+        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" fill="#E4E9DB" stroke="#D7DECA" stroke-width="1"/>
         <g clip-path="url(#basketClip)">
-          <rect x="6" y="${8 + (1 - p) * 25}" width="28" height="30" fill="#C98D2E" class="basket-fill-clip"/>
+          <rect x="6" y="${8 + (1 - p) * 25}" width="28" height="30" fill="#3E7A34" class="basket-fill-clip"/>
         </g>
-        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" fill="none" stroke="#26301F" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M8 17 H32" stroke="#26301F" stroke-width="1.6"/>
-        <path d="M13 17 L14 33 M20 17 L20 33 M27 17 L26 33" stroke="#FFFDF6" stroke-width="1" opacity=".5"/>
+        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" fill="none" stroke="#12140E" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M8 17 H32" stroke="#12140E" stroke-width="1.6"/>
+        <path d="M13 17 L14 33 M20 17 L20 33 M27 17 L26 33" stroke="#FFFFFF" stroke-width="1" opacity=".5"/>
       </svg>
       <div class="count"><span class="num">${count}</span><span class="lbl">cestas prontas</span></div>
     </div>`;
