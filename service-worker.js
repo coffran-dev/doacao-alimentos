@@ -10,7 +10,7 @@
  * a versão nova — do contrário, o navegador pode continuar servindo os
  * arquivos antigos do cache por um bom tempo.
  */
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = 'acao-social-shell-' + CACHE_VERSION;
 
 const APP_SHELL = [
