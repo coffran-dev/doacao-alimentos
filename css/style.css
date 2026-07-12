@@ -129,13 +129,15 @@ button { font-family: var(--font-body); cursor: pointer; }
   width: 100%;
 }
 
+/* ======================== CENTRALIZAÇÃO DO DASHBOARD ======================== */
 .page-header { 
   display: flex; 
-  align-items: flex-end; 
+  align-items: center; 
   justify-content: space-between; 
   gap: 16px; 
   margin-bottom: 22px; 
   flex-wrap: wrap; 
+  width: 100%;
 }
 .page-header h1 { 
   font-size: 1.7rem; 
@@ -154,6 +156,60 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-weight: 600; 
   margin: 0 0 6px; 
 }
+
+/* Grids */
+.grid { 
+  display: grid; 
+  gap: 18px; 
+  width: 100%;
+}
+.grid-stats { 
+  grid-template-columns: repeat(4, 1fr); 
+  width: 100%;
+}
+.grid-2 { 
+  grid-template-columns: 1.3fr 1fr; 
+  width: 100%;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  width: 100%;
+}
+
+/* Stats cards centralizados */
+.stat-card { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  text-align: center;
+  align-items: center;
+}
+.stat-card .label { 
+  font-size: .74rem; 
+  text-transform: uppercase; 
+  letter-spacing: .06em; 
+  color: var(--ink-soft); 
+  font-weight: 600; 
+}
+.stat-card .value { 
+  font-family: var(--font-mono); 
+  font-size: 2rem; 
+  font-weight: 600; 
+  color: var(--ink); 
+}
+.stat-card .sub { 
+  font-size: .78rem; 
+  color: var(--ink-soft); 
+}
+.stat-card.accent-wheat .value { color: var(--wheat-dark); }
+.stat-card.accent-leaf .value { color: var(--leaf); }
+.stat-card.accent-brick .value { color: var(--brick); }
 
 /* ---------------------------- Buttons ---------------------------- */
 .btn {
@@ -181,53 +237,13 @@ button { font-family: var(--font-body); cursor: pointer; }
 .btn-sm { padding: 6px 12px; font-size: .78rem; }
 .btn[disabled] { opacity: .5; pointer-events: none; }
 
-/* ---------------------------- Cards / grid ---------------------------- */
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-}
-.grid { display: grid; gap: 18px; }
-.grid-stats { grid-template-columns: repeat(4, 1fr); }
-.grid-2 { grid-template-columns: 1.3fr 1fr; }
-@media (max-width: 1000px) { 
-  .grid-stats { grid-template-columns: repeat(2, 1fr); } 
-  .grid-2 { grid-template-columns: 1fr; } 
-}
-
-.stat-card { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 6px; 
-}
-.stat-card .label { 
-  font-size: .74rem; 
-  text-transform: uppercase; 
-  letter-spacing: .06em; 
-  color: var(--ink-soft); 
-  font-weight: 600; 
-}
-.stat-card .value { 
-  font-family: var(--font-mono); 
-  font-size: 2rem; 
-  font-weight: 600; 
-  color: var(--ink); 
-}
-.stat-card .sub { 
-  font-size: .78rem; 
-  color: var(--ink-soft); 
-}
-.stat-card.accent-wheat .value { color: var(--wheat-dark); }
-.stat-card.accent-leaf .value { color: var(--leaf); }
-.stat-card.accent-brick .value { color: var(--brick); }
-
 /* ---------------------------- Signature: basket fill gauge ---------------------------- */
 .basket-hero { 
   display: flex; 
   align-items: center; 
+  justify-content: center;
   gap: 26px; 
+  width: 100%;
 }
 .basket-gauge { 
   position: relative; 
@@ -261,12 +277,15 @@ button { font-family: var(--font-body); cursor: pointer; }
   margin-top: 2px; 
 }
 
+.basket-hero-text { 
+  text-align: center;
+}
 .basket-hero-text h2 { 
   font-size: 1.25rem; 
   margin-bottom: 4px; 
 }
 .basket-hero-text p { 
-  margin: 0; 
+  margin: 0 auto; 
   color: var(--ink-soft); 
   font-size: .88rem; 
   max-width: 40ch; 
@@ -275,18 +294,26 @@ button { font-family: var(--font-body); cursor: pointer; }
   display: inline-flex; 
   align-items: center; 
   gap: 6px; 
-  margin-top: 10px;
+  margin: 10px auto 0;
   background: var(--brick-light); 
   color: var(--brick); 
   font-size: .76rem; 
   font-weight: 600;
   padding: 5px 10px; 
   border-radius: 999px;
+  justify-content: center;
 }
 
 /* ---------------------------- Tables ---------------------------- */
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: .87rem; }
+.table-wrap { 
+  overflow-x: auto; 
+  width: 100%;
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .87rem; 
+}
 th { 
   text-align: left; 
   font-size: .7rem; 
@@ -426,6 +453,7 @@ tbody tr:hover { background: var(--paper-dim); }
   align-items: center; 
   justify-content: space-between; 
   margin-bottom: 12px; 
+  width: 100%;
 }
 .section-title h3 { 
   font-size: 1.05rem; 
@@ -436,17 +464,20 @@ tbody tr:hover { background: var(--paper-dim); }
   height: 1px; 
   background: var(--border); 
   margin: 18px 0; 
+  width: 100%;
 }
 .chip-list { 
   display: flex; 
   flex-wrap: wrap; 
   gap: 6px; 
+  justify-content: center;
 }
 .mini-chart { 
   display: flex; 
   align-items: flex-end; 
   gap: 8px; 
   height: 90px; 
+  justify-content: center;
 }
 .mini-chart .bar { 
   flex: 1; 
@@ -454,6 +485,7 @@ tbody tr:hover { background: var(--paper-dim); }
   border-radius: 4px 4px 0 0; 
   position: relative; 
   min-height: 3px; 
+  max-width: 40px;
 }
 .mini-chart .bar span { 
   position: absolute; 
@@ -468,6 +500,16 @@ tbody tr:hover { background: var(--paper-dim); }
   padding: 40px; 
   text-align: center; 
   color: var(--ink-soft); 
+}
+
+/* ======================== RESPONSIVIDADE ======================== */
+@media (max-width: 1000px) { 
+  .grid-stats { 
+    grid-template-columns: repeat(2, 1fr); 
+  } 
+  .grid-2 { 
+    grid-template-columns: 1fr; 
+  } 
 }
 
 /* ======================== MOBILE ======================== */
@@ -555,12 +597,16 @@ tbody tr:hover { background: var(--paper-dim); }
   
   .page-header { 
     flex-direction: column; 
-    align-items: flex-start; 
-    text-align: left;
+    align-items: center; 
+    text-align: center;
   }
   
   .page-header h1 { 
     font-size: 1.4rem; 
+  }
+  
+  .page-header p {
+    text-align: center;
   }
   
   .grid-stats { 
@@ -593,6 +639,7 @@ tbody tr:hover { background: var(--paper-dim); }
   
   .limitante-tag {
     justify-content: center;
+    margin: 10px auto 0;
   }
   
   .item-row { 
@@ -618,6 +665,13 @@ tbody tr:hover { background: var(--paper-dim); }
   
   th, td {
     padding: 8px 10px;
+  }
+  
+  .section-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
   }
 }
 
