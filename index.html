@@ -2,26 +2,35 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5º IPI - Gestão da Ação Social</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ação Social — 5ª Igreja Presbiteriana Itabuna</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#12140E">
+<meta name="description" content="Gestão de arrecadação de alimentos, estoque, cestas básicas e famílias atendidas.">
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ação Social">
+<meta name="mobile-web-app-capable" content="yes">
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="mobile-topbar">
   <button id="menuToggle" aria-label="Abrir menu">☰</button>
-  <strong id="mobileTitle">5º IPI</strong>
+  <strong id="mobileTitle">Ação Social</strong>
 </div>
 
 <div class="app-shell">
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
-        <path d="M8 17 L20 8 L32 17 L29 33 L11 33 Z" stroke="#C98D2E" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
-        <path d="M8 17 H32" stroke="#C98D2E" stroke-width="2.4"/>
-        <path d="M13 17 L14 33 M20 17 L20 33 M27 17 L26 33" stroke="#F3ECDA" stroke-width="1.4" opacity=".6"/>
-      </svg>
-      <div class="brand-text">5º IPI<small>Ação Social</small></div>
+      <img class="brand-mark" src="assets/logo-icone.png" alt="5ª Igreja Presbiteriana Itabuna">
+      <div class="brand-text">5ª IPI<small>Ação Social</small></div>
     </div>
 
     <ul class="nav-list" id="navList">
@@ -55,7 +64,7 @@
       </button></li>
     </ul>
 
-    <div class="sidebar-footer">Sistema de arrecadação de alimentos · 5ª Igreja Presbiteriana de Itabuna</div>
+    <div class="sidebar-footer">Sistema de arrecadação de alimentos · dados vivem na sua Planilha Google</div>
   </aside>
 
   <main class="main" id="main">
@@ -77,5 +86,14 @@
 <script src="js/familias.js"></script>
 <script src="js/entregas.js"></script>
 <script src="js/app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js').catch((err) => {
+        console.warn('Service worker não registrado:', err);
+      });
+    });
+  }
+</script>
 </body>
 </html>
