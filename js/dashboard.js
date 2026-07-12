@@ -14,7 +14,7 @@ const DashboardView = (function () {
       <div class="page-header">
         <div>
           <p class="eyebrow">Visão geral</p>
-          <h1>Bom trabalho hoje 🌾</h1>
+          <h1>Acreditamos no seu potencial!</h1>
           <p>Acompanhe doações, estoque e o principal indicador: quantas cestas prontas a igreja tem agora.</p>
         </div>
       </div>
