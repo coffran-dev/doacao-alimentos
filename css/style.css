@@ -157,7 +157,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   margin: 0 0 6px; 
 }
 
-/* Grids */
+/* Grids centralizados */
 .grid { 
   display: grid; 
   gap: 18px; 
@@ -172,7 +172,7 @@ button { font-family: var(--font-body); cursor: pointer; }
   width: 100%;
 }
 
-/* Cards */
+/* Cards centralizados */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -182,7 +182,6 @@ button { font-family: var(--font-body); cursor: pointer; }
   width: 100%;
 }
 
-/* Stats cards centralizados */
 .stat-card { 
   display: flex; 
   flex-direction: column; 
@@ -210,32 +209,6 @@ button { font-family: var(--font-body); cursor: pointer; }
 .stat-card.accent-wheat .value { color: var(--wheat-dark); }
 .stat-card.accent-leaf .value { color: var(--leaf); }
 .stat-card.accent-brick .value { color: var(--brick); }
-
-/* ---------------------------- Buttons ---------------------------- */
-.btn {
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 8px;
-  border-radius: 999px; 
-  border: 1.5px solid transparent; 
-  padding: 10px 18px;
-  font-size: .88rem; 
-  font-weight: 600; 
-  transition: transform .1s ease, filter .15s ease;
-  white-space: nowrap;
-}
-.btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--wheat); color: white; }
-.btn-primary:hover { filter: brightness(1.06); }
-.btn-secondary { background: var(--card); color: var(--ink); border-color: var(--border); }
-.btn-secondary:hover { background: var(--paper-dim); }
-.btn-ghost { background: transparent; color: var(--ink-soft); border-color: transparent; padding: 8px 12px; }
-.btn-ghost:hover { background: var(--paper-dim); }
-.btn-danger { background: var(--brick-light); color: var(--brick); }
-.btn-danger:hover { filter: brightness(0.97); }
-.btn-sm { padding: 6px 12px; font-size: .78rem; }
-.btn[disabled] { opacity: .5; pointer-events: none; }
 
 /* ---------------------------- Signature: basket fill gauge ---------------------------- */
 .basket-hero { 
@@ -303,6 +276,32 @@ button { font-family: var(--font-body); cursor: pointer; }
   border-radius: 999px;
   justify-content: center;
 }
+
+/* ---------------------------- Buttons ---------------------------- */
+.btn {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px;
+  border-radius: 999px; 
+  border: 1.5px solid transparent; 
+  padding: 10px 18px;
+  font-size: .88rem; 
+  font-weight: 600; 
+  transition: transform .1s ease, filter .15s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--wheat); color: white; }
+.btn-primary:hover { filter: brightness(1.06); }
+.btn-secondary { background: var(--card); color: var(--ink); border-color: var(--border); }
+.btn-secondary:hover { background: var(--paper-dim); }
+.btn-ghost { background: transparent; color: var(--ink-soft); border-color: transparent; padding: 8px 12px; }
+.btn-ghost:hover { background: var(--paper-dim); }
+.btn-danger { background: var(--brick-light); color: var(--brick); }
+.btn-danger:hover { filter: brightness(0.97); }
+.btn-sm { padding: 6px 12px; font-size: .78rem; }
+.btn[disabled] { opacity: .5; pointer-events: none; }
 
 /* ---------------------------- Tables ---------------------------- */
 .table-wrap { 
